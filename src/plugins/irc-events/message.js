@@ -29,6 +29,7 @@ module.exports = function(irc, network) {
 		}
 		text.split(" ").forEach(function(w) {
 			if (w.indexOf(irc.me) === 0) type += " highlight";
+			else if (w.indexOf("deskcat") === 0) type += " highlight";
 		});
 		var self = false;
 		if (data.from.toLowerCase() == irc.me.toLowerCase()) {
